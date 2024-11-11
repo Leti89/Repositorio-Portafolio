@@ -1,128 +1,159 @@
-/* Estilos generales */
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
+/* Reiniciar márgenes y padding */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Estilo base */
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
     background-color: #f4f4f4;
     color: #000000;
-    background-image:url("Imagen\ fondo.jpeg") ;
-}
-
-header {
+    background-image: url("Imagen fondo.jpeg");
+    background-size: contain;  /* Asegura que la imagen cubra todo el fondo */
+    background-position: center center;  /* Centra la imagen en el fondo */
+    background-repeat: no-repeat;
+    background-attachment: fixed;  /* Mantiene la imagen fija en el fondo */
+    font-size: 1rem; /* Tamaño base */
+  }
+  
+  /* Para pantallas grandes (PC) */
+  @media (min-width: 1024px) {
+    body {
+      font-size: 18px;
+    }
+  }
+  
+  /* Para tabletas */
+  @media (max-width: 1024px) and (min-width: 768px) {
+    body {
+      font-size: 16px;
+    }
+  }
+  
+  /* Para móviles */
+  @media (max-width: 767px) {
+    body {
+      font-size: 14px;
+    }
+  
+    #Yo,
+    #Experiencia,
+    #Contacto {
+      max-width: 100%;
+      margin: 1rem;
+    }
+  
+    nav a.nav-link {
+      font-size: 1rem;
+      padding: 0.5rem 0;
+    }
+  }
+  
+  /* Estilo del header */
+  header {
     background-color: #db8effd3;
     color: #d2abdb;
     padding: 1rem 0;
     text-align: center;
-}
-
-header a.MiPortfolio {
+  }
+  
+  header a.MiPortfolio {
     text-decoration: none;
     color: #32124d;
-}
-
-header h1 {
+  }
+  
+  header h1 {
     margin: 0;
-   
-}
-
-nav {
+  }
+  
+  nav {
     margin-top: 1rem;
-}
-
-nav a.nav-link {
+  }
+  
+  nav a.nav-link {
     color: #000000;
     text-decoration: none;
     margin: 0 1rem;
     padding: 0.5rem 1rem;
     border-radius: 5px;
     transition: background-color 0.3s;
-}
-
-nav a.nav-link:hover {
+  }
+  
+  nav a.nav-link:hover {
     background-color: #ebcef8;
-}
-
-/* Sección Sobre Mi */
-#Yo {
-    background: #ebebeb;
-    padding: 2rem;
-    margin: 2rem auto;
-    max-width: 800px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-#Yo h2 {
-    text-align: center;
-    margin-top: 0;
-}
-
-#Yo p {
-    text-align: justify;
-}
-
-/* Sección Experiencias */
-#Experiencia {
-    background: #ffffff;
-    padding: 2rem;
-    margin: 2rem auto;
-    max-width: 800px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-#Experiencia h2 {
-    text-align: center;
-    margin-top: 0;
-}
-
-.experiencia-item {
-    margin-bottom: 1.5rem;
-}
-
-.experiencia-item p {
-    text-align: justify;
-}
-
-/* Sección Contacto */
-#Contacto {
+  }
+  
+  /* Sección Sobre Mi */
+  #Yo,
+  #Experiencia,
+  #Contacto {
     background: #fff;
     padding: 2rem;
     margin: 2rem auto;
+    width: 90%;
     max-width: 800px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-#Contacto h2 {
+  }
+  
+  #Yo h2,
+  #Experiencia h2,
+  #Contacto h2 {
     text-align: center;
     margin-top: 0;
-}
-
-#Contacto form {
+  }
+  
+  #Yo p,
+  #Experiencia p {
+    text-align: justify;
+  }
+  
+  /* Estilo de experiencia */
+  .experiencia-item {
+    margin-bottom: 1.5rem;
+  }
+  
+  .experiencia-item p {
+    text-align: justify;
+  }
+  
+  /* Formulario de contacto */
+  #Contacto form {
     display: flex;
     flex-direction: column;
-}
-
-#Contacto form input,
-#Contacto form textarea {
-    padding: 0.5rem;
+    align-items: flex-start;
+  }
+  
+  #Contacto form input,
+  #Contacto form textarea {
+    padding: 0.8rem;
     margin-bottom: 1rem;
     border: 1px solid #ddd;
     border-radius: 5px;
-}
-
-#Contacto form button {
-    padding: 0.7rem;
+    width: 100%;
+    resize: none;
+  }
+  
+  #Contacto form button {
+    padding: 1rem;
     border: none;
     background-color: #333;
     color: #fff;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-}
-
-#Contacto form button:hover {
+    width: 100%;
+  }
+  
+  #Contacto form button:hover {
     background-color: #575757;
-}
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
