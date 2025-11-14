@@ -40,7 +40,7 @@
     }
   
     #Yo,
-    #Experiencia,
+    #Habilidades,
     #Contacto {
       max-width: 100%;
       margin: 1rem;
@@ -85,75 +85,86 @@
   nav a.nav-link:hover {
     background-color: #ebcef8;
   }
-  
-  /* Sección Sobre Mi */
-  #Yo,
-  #Experiencia,
-  #Contacto {
-    background: #fff;
+
+nav a.nav-link:hover {
+    background-color: #d8aefc;
+    color: #32124d;
+    transition: all 0.3s ease;
+}
+
+/* Secciones como tarjetas */
+section {
+    background: rgba(255, 255, 255, 0.95);
     padding: 2rem;
     margin: 2rem auto;
     width: 90%;
     max-width: 800px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  #Yo h2,
-  #Experiencia h2,
-  #Contacto h2 {
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Títulos de sección */
+section h2 {
     text-align: center;
-    margin-top: 0;
-  }
-  
-  #Yo p,
-  #Experiencia p {
-    text-align: justify;
-  }
-  
-  /* Estilo de experiencia */
-  .experiencia-item {
     margin-bottom: 1.5rem;
-  }
-  
-  .experiencia-item p {
-    text-align: justify;
-  }
-  
-  /* Formulario de contacto */
-  #Contacto form {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  #Contacto form input,
-  #Contacto form textarea {
-    padding: 0.8rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    width: 100%;
-    resize: none;
-  }
-  
-  #Contacto form button {
-    padding: 1rem;
-    border: none;
-    background-color: #333;
-    color: #fff;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    width: 100%;
-  }
-  
-  #Contacto form button:hover {
-    background-color: #575757;
-  }
-  
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-  
+    color: #32124d;
+    font-size: 2rem;
+}
+
+/* Listas */
+ul {
+    list-style: none; 
+    padding-left: 0;
+}
+
+ul li {
+    padding: 0.5rem 0;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #eee;
+}
+
+/* Habilidades, educación y cursos */
+#Habilidades ul li {
+    color: #5a2ca0;
+}
+
+#Educacion ul li,
+#Cursos ul li {
+    color: #32124d;
+}
+
+/* Contacto */
+#Contacto p, #Contacto a {
+    display: block;
+    text-align: center;
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+    color: #32124d;
+}
+
+#Contacto a:hover {
+    color: #d2abdb;
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+    section {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+    }
+
+    ul li {
+        font-size: 1rem;
+    }
+}
