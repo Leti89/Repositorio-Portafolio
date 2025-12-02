@@ -11,12 +11,12 @@
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #000000;
-    background-image: url("Imagen fondo.jpeg");
-    background-size: contain;  /* Asegura que la imagen cubra todo el fondo */
-    background-position: center center;  /* Centra la imagen en el fondo */
+    background-image: url("img/Imagen fondo.jpeg");
+    background-size: contain; 
+    background-position: center center;  
     background-repeat: no-repeat;
-    background-attachment: fixed;  /* Mantiene la imagen fija en el fondo */
-    font-size: 1rem; /* Tamaño base */
+    background-attachment: fixed;  
+    font-size: 1rem; 
   }
   
   /* Para pantallas grandes (PC) */
@@ -52,7 +52,7 @@
     }
   }
   
-  /* Estilo del header */
+  /* header */
   header {
     background-color: #db8effd3;
     color: #d2abdb;
@@ -152,6 +152,104 @@ ul li {
     color: #d2abdb;
     text-decoration: underline;
 }
+/* ===================== */
+/*    SECCIÓN PROYECTOS  */
+/* ===================== */
+
+#Proyectos {
+    width: 90%;
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#Proyectos:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Grilla de proyectos */
+.grid-proyectos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* Tarjetas */
+.card {
+    background: rgba(255, 255, 255, 0.98);
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Imágenes */
+.card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+/* Títulos */
+.card h3 {
+    color: #32124d;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+/* Descripción */
+.card p {
+    font-size: 1rem;
+    color: #5a2ca0;
+    margin-bottom: 1rem;
+}
+
+/* Botones */
+.botones a {
+    display: inline-block;
+    background: #d8aefc;
+    color: #32124d;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    margin: 0.3rem;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.botones a:hover {
+    background: #c084ff;
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+    #Proyectos {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+
+    .card h3 {
+        font-size: 1.1rem;
+    }
+
+    .card p {
+        font-size: 0.95rem;
+    }
+}
+
 
 /* Responsive */
 @media (max-width: 767px) {
